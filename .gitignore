@@ -1,0 +1,39 @@
+# --- OS ---
+.DS_Store
+Thumbs.db
+
+# --- Python bytecode ---
+__pycache__/
+**/__pycache__/
+*.py[cod]
+*$py.class
+
+# --- Virtual envs ---
+.venv/
+venv/
+env/
+
+# --- Packaging / build ---
+build/
+dist/
+*.egg-info/
+pip-wheel-metadata/
+
+
+# --- Linters / type checkers / caches ---
+.mypy_cache/
+.pyre/
+.pytype/
+.ruff_cache/
+.cache/
+
+
+# --- Secrets & config (very important) ---
+.env
+.env.*
+*.env
+secrets.*.json
+*.key
+*.pem
+*.crt
+
