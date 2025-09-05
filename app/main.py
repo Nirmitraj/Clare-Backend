@@ -17,7 +17,7 @@ app.add_middleware(
 )
 
 # Mount ALL routers under /api
-app.include_router(chat_router.router,    prefix="/api")   # -> /api/chat
+app.include_router(chat_router.router)   # -> /api/chat
 app.include_router(contact.router,        prefix="/api")   # -> /api/contact
 
 @app.get("/")
