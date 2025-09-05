@@ -1,9 +1,10 @@
+# app/routers/chat.py
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
 import httpx
 from app.config import settings
 
-router = APIRouter(prefix="/api", tags=["chat"])
+router = APIRouter(prefix="/chat", tags=["chat"])  # <-- NOT /api
 
 class ChatIn(BaseModel):
     messages: list
@@ -11,7 +12,7 @@ class ChatIn(BaseModel):
     temperature: float = 0.2
     model: str = "llama-3.3-70b-versatile"
 
-@router.post("/chat")
+@router.post("")  # "" => /chat
 async def chat(body: ChatIn):
     payload = {
         "model": body.model,
