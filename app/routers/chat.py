@@ -3,7 +3,7 @@ from pydantic import BaseModel
 import httpx
 from app.config import settings
 
-router = APIRouter(prefix="/api", tags=["chat"])
+router = APIRouter(prefix="/chat", tags=["chat"])
 
 class ChatIn(BaseModel):
     messages: list
